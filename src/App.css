@@ -1,38 +1,120 @@
-.App {
+*{
+  margin: 0%;
+  padding: 0%;
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* background-color: #282c34; */
+  min-height: 100vh; 
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.left{
+  margin: 10px;
+  margin-right: 7px;
+  display:flex;
+  width:28%;
+  border: 3px rgb(209, 217, 224) solid;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: space-between; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.right{
+  margin: 10px;
+  margin-left: 0px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width:78%;
+  border: 3px rgb(214, 218, 218) solid;
+  box-shadow: rgba(0, 0, 0, 0.27) 0px 3px 8px;
+  border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.title{
+  font-size: 2.5rem;
+  margin-top: 5px;
+  font-weight: 200;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form{
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  padding: 15px;
+  list-style-image:none;
+}
+
+label{
+  display: flex;
+  justify-content: flex-start;
+  margin: 2px;
+  /* margin-bottom: 10px; */
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+input{
+  height:3vh;
+  width: 90%;
+  margin-top: 0.5rem;
+}
+
+input[type=text],[type=url] {
+  padding: 15px 22px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid rgb(147, 147, 247);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  border-radius: 8px;
+}
+
+textarea{
+  border: 3px solid rgb(147, 147, 247);
+  border-radius: 8px;
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+input[type=url]:focus {
+  border: 3px solid #555;
+}
+
+textarea{
+  width: 90%;
+  height: 15vh;
+}
+
+.select-image{
+  margin-top: 2px;
+  height:auto;
+  width:auto;
+}
+
+input::file-selector-button {
+  font-weight: bold;
+  color: black;
+  padding: 0.5em;
+  border: thin solid grey;
+  border-radius: 3px;
+}
+
+.menu-languages{
+ background-color:rgb(248, 242, 242);
+}
+
+
+.flexa{
+  display: flex;
+  margin:15px 0px 15px 0px;
+  justify-content: space-between;
+
 }
