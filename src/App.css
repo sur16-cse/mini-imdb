@@ -118,3 +118,10 @@ input::file-selector-button {
   justify-content: space-between;
 
 }
+
+.tab{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}

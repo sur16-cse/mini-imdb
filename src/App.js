@@ -5,29 +5,28 @@ import Show from "./component/show";
 import Tab from "./component/Tab";
 
 function App() {
-  // const [title,description,Image,selectedLanguage,value]=formFields
-
   const [list, setList] = useState([]); // list to set form submissions
   const [formFields, setFormFields] = useState({}); // formdata
   const [langList, setLangList] = useState([]);
   const [tabValue, setTabValue] = useState("");
-  const [filterList, setFilterList] = useState(list);
+  const [filterList, setFilterList] = useState([]);
   
-
   if (Object.keys(formFields).length !== 0) {
     // const listItem=[...list]
     setList((olddata) => [...olddata, formFields]);
-    setLangList([...langList.filter(item => item!=formFields.Language), formFields.Language]);
+    setLangList([...langList.filter(item => item!=formFields.Language),formFields.Language]);
     console.log(filterList);
     setFormFields({});
   }
 
   useEffect(() => {
-    console.log(filterList)
-    setFilterList(filterList.filter((item) => item.Language==tabValue))
-  }, [tabValue])
-  
+    (tabValue==="")?setFilterList(list):setFilterList(list.filter((item) => item.Language===tabValue))
 
+  }, [tabValue,langList])
+  
+  console.log(filterList +" filter")
+    console.log(list)
+    console.log(tabValue+" valuetab")
   const deleteitem = (ite) => {
     const listitems = [...list];
     console.log(ite);
@@ -43,13 +42,16 @@ function App() {
           <Form formFields={formFields} setFormFields={setFormFields} />
         </div>
         <div className="right">
-          <Tab Language={langList} setTabValue={setTabValue} />
+          {list.length>0?<p>My Movies</p>:""}
+          <div className="tab">
+          <Tab Language={langList} setTabValue={setTabValue} tabValue={tabValue}/>
+          </div>
           <div>
             {filterList &&
-              filterList.map((t, i) => {
+              filterList.map((t,i) => {
                 return  (
-                  <div key="i">
-                    <Show data={t} deleteitem={deleteitem} />
+                  <div key={i}>
+                    <Show data={t} deleteitem={deleteitem}  tablanguage={tabValue} />
                   </div>
                 ) 
               })}

@@ -1,15 +1,22 @@
-import React, {useState} from "react";
-
-const Tab = ({Language,setTabValue}) => {
+import React, {useEffect, useState} from "react";
+import './tab.css'
+const BUTTON_TYPE_CLASSES={
+  active:"activetab",
+}
+const Tab = ({Language,setTabValue,tabValue}) => {
+const [active,setActive]=useState(-1);
 
 console.log(Language)
   return (
     <div >
       {
         Language && Language.map(
-          (item)=>{
+          (item,i)=>{
             return (
-              <div onClick={() => setTabValue(item)}>{item}</div>
+               <button key={i}  className={(i==active)?'buttonClass activetab':'buttonClass'} onClick={(e) => {
+                  setActive(i);
+                  setTabValue(item);
+               }}>{item}</button>
             )
           }
         )
