@@ -9,7 +9,6 @@
   flex-direction: row;
   /* background-color: #282c34; */
   min-height: 100vh; 
-  text-align: center;
 }
 
 .left{
@@ -34,94 +33,46 @@
   border: 3px rgb(214, 218, 218) solid;
   box-shadow: rgba(0, 0, 0, 0.27) 0px 3px 8px;
   border-radius: 10px;
+  padding-left:20px;
+  padding-right:20px;
 }
 
 .title{
   font-size: 2.5rem;
   margin-top: 5px;
   font-weight: 200;
-}
-
-form{
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
-  padding: 15px;
-  list-style-image:none;
-}
-
-label{
-  display: flex;
-  justify-content: flex-start;
-  margin: 2px;
-  /* margin-bottom: 10px; */
-  font-size: 1.5rem;
-  font-weight: 100;
-}
-
-input{
-  height:3vh;
-  width: 90%;
-  margin-top: 0.5rem;
-}
-
-input[type=text],[type=url] {
-  padding: 15px 22px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 3px solid rgb(147, 147, 247);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  outline: none;
-  border-radius: 8px;
-}
-
-textarea{
-  border: 3px solid rgb(147, 147, 247);
-  border-radius: 8px;
-}
-
-input[type=text]:focus {
-  border: 3px solid #555;
-}
-input[type=url]:focus {
-  border: 3px solid #555;
-}
-
-textarea{
-  width: 90%;
-  height: 15vh;
-}
-
-.select-image{
-  margin-top: 2px;
-  height:auto;
-  width:auto;
-}
-
-input::file-selector-button {
-  font-weight: bold;
-  color: black;
-  padding: 0.5em;
-  border: thin solid grey;
-  border-radius: 3px;
-}
-
-.menu-languages{
- background-color:rgb(248, 242, 242);
-}
-
-
-.flexa{
-  display: flex;
-  margin:15px 0px 15px 0px;
-  justify-content: space-between;
-
+  text-align: center;
 }
 
 .tab{
   display: flex;
-  align-items: center;
   flex-direction: row;
-  justify-content: center;
+  margin-bottom: 10px;
+  padding-left: 5px;
+}
+
+.movie-title{
+  padding-top: 0px;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.sort{
+  display: flex;
+  justify-content:space-between;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.sort-rating{
+  margin-right: 260px;
+}
+
+.sort-title{
+  margin-left: 10px;
+}
+
+.button:focus {
+  outline: none;
 }

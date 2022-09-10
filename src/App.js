@@ -1,8 +1,8 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import Form from "./component/form";
-import Show from "./component/show";
-import Tab from "./component/Tab";
+import Form from "./component/form/form";
+import Show from "./component/show/show";
+import Tab from "./component/tab/Tab";
 
 function App() {
   const [list, setList] = useState([]); // list to set form submissions
@@ -42,11 +42,15 @@ function App() {
           <Form formFields={formFields} setFormFields={setFormFields} />
         </div>
         <div className="right">
-          {list.length>0?<p>My Movies</p>:""}
+          {list.length>0?<p className="movie-title">My Movies</p>:""}
           <div className="tab">
           <Tab Language={langList} setTabValue={setTabValue} tabValue={tabValue}/>
           </div>
           <div>
+          <div className="sort">
+              <span className="sort-title">Title</span>
+              <span className="sort-rating">Rating</span>
+          </div>
             {filterList &&
               filterList.map((t,i) => {
                 return  (

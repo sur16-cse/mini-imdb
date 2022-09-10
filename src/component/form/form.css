@@ -1,0 +1,70 @@
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    list-style-image:none;
+  }
+  
+  label{
+    display: flex;
+    justify-content: flex-start;
+    margin: 2px;
+    font-size: 1.5rem;
+    font-weight: 100;
+  }
+  
+  input{
+    height:3vh;
+    width: 90%;
+    margin-top: 0.5rem;
+  }
+  
+  input[type=text],[type=url] {
+    padding: 15px 22px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid rgb(147, 147, 247);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    border-radius: 8px;
+  }
+  
+  textarea{
+    border: 3px solid rgb(147, 147, 247);
+    border-radius: 8px;
+    width: 78%;
+    height: 15vh;
+    padding: 12px 20px;
+    resize: none;
+  }
+  
+  
+  input[type=text]:focus {
+    border: 3px solid #555;
+  }
+  input[type=url]:focus {
+    border: 3px solid #555;
+  }
+  
+  .select-image{
+    margin-top: 2px;
+    height:auto;
+    width:auto;
+  }
+  
+  input::file-selector-button {
+    font-weight: bold;
+    color: black;
+    padding: 0.5em;
+    border: thin solid grey;
+    border-radius: 3px;
+  }
+
+  .flexa{
+    display: flex;
+    margin:15px 0px 15px 0px;
+    justify-content: space-between;
+  
+  }
+  

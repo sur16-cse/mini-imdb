@@ -1,0 +1,18 @@
+.buttonClass{
+    /* border:solid black 2px; */
+    padding:10px;
+    color: black;
+    background-color: rgb(255, 253, 253);
+    border-radius: 3px;
+}
+
+.activetab{
+    background-color: rgb(119, 0, 230);
+    color: aliceblue;
+}
+
+.tabcontainer{
+    display:flex;
+    box-shadow: rgba(153, 149, 165, 0.9) 0px 3px 8px;
+}
+

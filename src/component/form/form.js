@@ -4,6 +4,7 @@ import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { useState } from 'react';
+import './form.css'
 
 const Form = ({formFields,setFormFields}) => {
   const [title,setTitle]=useState("");
@@ -55,8 +56,6 @@ const Form = ({formFields,setFormFields}) => {
 
     <label htmlFor="inputTag">Image url</label>
     <input type="url" name="image-input"  ref={urlInput}
-        // value={Image}
-      
         onChange={(event) => {
         setSelectedImage(event.target.value)
     }}  />
@@ -69,7 +68,6 @@ const Form = ({formFields,setFormFields}) => {
             console.log(event.target.files[0]);
             setSelectedImage(event.target.files[0]);
           }}
-          // value={Image}
       />
       <div className="flexa">
       <Typography component="legend">Rating</Typography>
