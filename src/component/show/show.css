@@ -1,7 +1,7 @@
 .show-container{
   display: flex;
-  box-shadow: rgba(105, 94, 146, 0.9) 0px 2px 5px;
-  margin:6px
+  box-shadow: rgba(146, 116, 255, 0.9) 0px 2px 5px;
+  margin:9px;
 }
 
 .show-container-left{
@@ -9,7 +9,9 @@
   flex: 60%;
   /* border: 1px solid black; */
   box-shadow: rgba(153, 149, 165, 0.9) 0px 3px 8px;
-  margin:5px
+  margin:5px;
+  justify-content: center;
+  align-items: center;
 }
 
 .show-container-right{
@@ -17,7 +19,9 @@
   flex:20%;
   /* border: 1px solid black; */
   box-shadow: rgba(153, 149, 165, 0.9) 0px 3px 8px;
-  margin:5px
+  margin:5px;
+  justify-content: center;
+  align-items: center;
 }
 
 .details{

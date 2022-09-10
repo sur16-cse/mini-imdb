@@ -10,7 +10,7 @@ const Show = ({data,deleteitem}) => {
                 <div >
                     <img
                     alt="not found"
-                    width={"150px"}
+                    width={"160px"}
                     src={
                         typeof data.Image === "string"
                         ? String(data.Image)
@@ -19,7 +19,7 @@ const Show = ({data,deleteitem}) => {
                     />
                 </div>
                 <div className='details'>
-                    <div>{data.title}</div>
+                    <div style={{fontWeight:500}}>{data.title}</div>
                     <div>{data.description}</div>
                     <button className="remove-button" onClick={() => deleteitem(data)}>
                         Remove

@@ -34,6 +34,41 @@ function App() {
     setLangList(langList.filter((obj) => obj != ite.Language));
   };
 
+  const sortingAsc=(col)=>{
+
+      const sorted =[...filterList]
+      if(col=="Title"){
+      sorted.sort((a,b)=>{
+        return a.title>b.title?1:-1
+      })
+      setFilterList(sorted)
+    }
+    else if(col=="Rating"){
+      sorted.sort((a,b)=>{
+        return a.Rating>b.Rating?1:-1
+      })
+      setFilterList(sorted)
+    }
+  }
+
+  const sortingDesc=(col)=>{
+    const sorted =[...filterList]
+    if(col=="Title"){
+      sorted.sort((a,b)=>{
+        return b.title>a.title?1:-1
+      })
+      setFilterList(sorted)
+    }
+    else if(col=="Rating"){
+      sorted.sort((a,b)=>{
+        return b.Rating>a.Rating?1:-1
+      })
+      setFilterList(sorted)
+    }
+}
+
+
+
   return (
     <div className="App">
       <div className="container">
@@ -47,10 +82,28 @@ function App() {
           <Tab Language={langList} setTabValue={setTabValue} tabValue={tabValue}/>
           </div>
           <div>
+          {list.length?
           <div className="sort">
-              <span className="sort-title">Title</span>
-              <span className="sort-rating">Rating</span>
+
+            <div className="sort-title">
+            <span  >Title</span>
+              <div className="sort-button">
+                <span onClick={()=>sortingAsc("Rating")} className="up">▲</span>
+                <span onClick={()=>sortingDesc("Rating")} className="down">▼</span>
+              </div>
+            </div>
+
+            <div className="sort-rating">
+            <span >Rating</span>
+              <div className="sort-button">
+                <span onClick={()=>sortingAsc("Title")} className="up">▲</span>
+                <span onClick={()=>sortingDesc("Title")} className="down">▼</span>
+              </div>
+            </div> 
+
           </div>
+          :""
+          }
             {filterList &&
               filterList.map((t,i) => {
                 return  (

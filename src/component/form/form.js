@@ -13,7 +13,7 @@ const Form = ({formFields,setFormFields}) => {
   const [selectedLanguage, setSelectedLanguage] = useState("");
   const [rating, setRating] = useState(0);
   const urlInput = useRef(null);
-  
+  const fileInput=useRef(null)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -32,6 +32,7 @@ const Form = ({formFields,setFormFields}) => {
        setSelectedLanguage("")
        setSelectedImage("")
        urlInput.current.value="";
+    fileInput.current.value=""
   };
 
   const setClear=()=>{
@@ -41,6 +42,7 @@ const Form = ({formFields,setFormFields}) => {
     setSelectedLanguage("")
     setSelectedImage("")
     urlInput.current.value="";
+    fileInput.current.value=""
   }
 
   return (
@@ -64,6 +66,7 @@ const Form = ({formFields,setFormFields}) => {
 
       <input className='select-image' type="file" accept="image/png, image/jpg, image/gif, image/jpeg"
         name="image-input"
+        ref={urlInput}
         onChange={(event) => {
             console.log(event.target.files[0]);
             setSelectedImage(event.target.files[0]);
@@ -97,6 +100,9 @@ const Form = ({formFields,setFormFields}) => {
           </option>
           <option className="optionsMenu" value="English">
             English
+          </option>
+          <option className="optionsMenu" value="Hindi">
+            Hindi(हिन्दी)
           </option>
           <option className="optionsMenu" value="Tamil">
             Tamil(தமிழ்)

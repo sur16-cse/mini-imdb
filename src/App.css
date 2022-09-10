@@ -66,13 +66,27 @@
 }
 
 .sort-rating{
-  margin-right: 260px;
+  margin-right: 280px;
+  display: flex;
 }
 
 .sort-title{
   margin-left: 10px;
+  display: flex;
 }
 
 .button:focus {
   outline: none;
+}
+
+.sort-button{
+  display: flex;
+  flex-direction: column;
+  padding-left: 5px;
+
+}
+
+.sort-button .up,.down{
+ font-size: 9px;
+ cursor: pointer;
 }
