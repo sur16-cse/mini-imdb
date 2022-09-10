@@ -1,6 +1,18 @@
-# Getting Started with Create React App
+# mini-imdb  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Task:  
+1. Create a form to add the movies into the list. Form contains few fields as shown - Title, Description, Image URL or File upload, Rating, Language.
+2. Language is a dropdown and you can fix the dropdown with any four language options of your choice.
+3. The language tab should show up only if the movie is added with that language. Example if I have added only 2 movies from Telugu and English. Only those 2 tabs would show up.
+4. The user should be able to sort the list according to the Title alphabetically and also should be able to sort the list using the Rating (Ascending & Descending)
+5. For storing the data you can use any browser storage
+
+
+Preview:  
+![Screenshot (360)](https://user-images.githubusercontent.com/67889306/189484150-a3b9ef69-5e4f-4d32-b096-ceb51e7a626d.png)
+![Screenshot (364)](https://user-images.githubusercontent.com/67889306/189484129-a5e368f2-f3de-4507-8070-d50f2035caaf.png)
+![Screenshot (365)](https://user-images.githubusercontent.com/67889306/189484130-6f13e176-b9eb-4f8f-b90c-2902c285913d.png)
+
 
 ## Available Scripts
 
