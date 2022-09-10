@@ -1,4 +1,11 @@
-# mini-imdb 
+# mini-imdb   
+
+Preview:  
+![Screenshot (360)](https://user-images.githubusercontent.com/67889306/189484150-a3b9ef69-5e4f-4d32-b096-ceb51e7a626d.png)
+
+![Screenshot (364)](https://user-images.githubusercontent.com/67889306/189484129-a5e368f2-f3de-4507-8070-d50f2035caaf.png)
+![Screenshot (365)](https://user-images.githubusercontent.com/67889306/189484130-6f13e176-b9eb-4f8f-b90c-2902c285913d.png)
+
 
 ## Available Scripts
 
