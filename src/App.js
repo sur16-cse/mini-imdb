@@ -39,6 +39,7 @@ function App() {
       const sorted =[...filterList]
       if(col=="Title"){
       sorted.sort((a,b)=>{
+        console.log(a.title>b.title)
         return a.title>b.title?1:-1
       })
       setFilterList(sorted)
@@ -55,6 +56,7 @@ function App() {
     const sorted =[...filterList]
     if(col=="Title"){
       sorted.sort((a,b)=>{
+        console.log(a.title>b.title)
         return b.title>a.title?1:-1
       })
       setFilterList(sorted)
@@ -88,16 +90,17 @@ function App() {
             <div className="sort-title">
             <span  >Title</span>
               <div className="sort-button">
-                <span onClick={()=>sortingAsc("Rating")} className="up">▲</span>
-                <span onClick={()=>sortingDesc("Rating")} className="down">▼</span>
+              <span onClick={()=>sortingAsc("Title")} className="up">▲</span>
+                <span onClick={()=>sortingDesc("Title")} className="down">▼</span>
               </div>
             </div>
 
             <div className="sort-rating">
             <span >Rating</span>
               <div className="sort-button">
-                <span onClick={()=>sortingAsc("Title")} className="up">▲</span>
-                <span onClick={()=>sortingDesc("Title")} className="down">▼</span>
+              <span onClick={()=>sortingAsc("Rating")} className="up">▲</span>
+                <span onClick={()=>sortingDesc("Rating")} className="down">▼</span>
+                
               </div>
             </div> 
 

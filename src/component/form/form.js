@@ -33,6 +33,7 @@ const Form = ({formFields,setFormFields}) => {
        setSelectedImage("")
        urlInput.current.value="";
     fileInput.current.value=""
+    fileInput.current.files=null
   };
 
   const setClear=()=>{
@@ -42,7 +43,9 @@ const Form = ({formFields,setFormFields}) => {
     setSelectedLanguage("")
     setSelectedImage("")
     urlInput.current.value="";
+    console.log(fileInput)
     fileInput.current.value=""
+    fileInput.current.files=null
   }
 
   return (
@@ -66,7 +69,8 @@ const Form = ({formFields,setFormFields}) => {
 
       <input className='select-image' type="file" accept="image/png, image/jpg, image/gif, image/jpeg"
         name="image-input"
-        ref={urlInput}
+        // ref={urlInput}
+        ref={fileInput}
         onChange={(event) => {
             console.log(event.target.files[0]);
             setSelectedImage(event.target.files[0]);
