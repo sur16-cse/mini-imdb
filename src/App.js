@@ -10,7 +10,10 @@ function App() {
     return localData ? JSON.parse(localData):[]
   }); // list to set form submissions
   const [formFields, setFormFields] = useState({}); // formdata
-  const [langList, setLangList] = useState([]);
+  const [langList, setLangList] = useState(()=>{
+    const lang=localStorage.getItem("langList");
+    return lang?JSON.parse(lang):[]
+  });
   const [tabValue, setTabValue] = useState("");
   const [filterList, setFilterList] = useState([]);
   
@@ -18,7 +21,7 @@ function App() {
     setList((olddata) => [...olddata, formFields]);
     localStorage.setItem("list",JSON.stringify([...list,formFields]))
     setLangList([...langList.filter(item => item!=formFields.Language),formFields.Language]);
-    // localStorage.setItem("langList",JSON.stringify([...langList,formFields.Language]))
+    localStorage.setItem("langList",JSON.stringify([...langList,formFields.Language]))
     console.log(filterList);
     setFormFields({});
   }
@@ -27,13 +30,9 @@ function App() {
     (tabValue==="")?setFilterList(list):setFilterList(list.filter((item) => item.Language===tabValue))
   }, [tabValue,langList])
   
-  console.log(filterList +" filter")
-    console.log(list)
-    console.log(tabValue+" valuetab")
-
   const deleteitem = (ite) => {
     const listitems = [...list];
-    console.log(ite);
+    // console.log(ite);
     setList(listitems.filter((obj) => obj.title != ite.title));
   localStorage.setItem("list",JSON.stringify(listitems.filter((obj) => obj.title != ite.title)))
     setLangList(langList.filter((obj) => obj != ite.Language));
